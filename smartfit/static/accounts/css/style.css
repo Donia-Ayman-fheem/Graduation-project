@@ -1,0 +1,168 @@
+/* SmartFit Custom CSS */
+
+/* Animation classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animations for feature cards */
+.feature-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.feature-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.feature-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.feature-card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.feature-card:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.feature-card:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+/* Custom button styles */
+.btn-primary {
+    @apply px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-blue-700 transition duration-300;
+}
+
+.btn-secondary {
+    @apply px-6 py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition duration-300;
+}
+
+.btn-outline {
+    @apply px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition duration-300;
+}
+
+/* Custom card hover effects */
+.hover-card {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Pulse animation for CTA buttons */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3B82F6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2563EB;
+}
+
+/* RTL specific adjustments */
+[dir="rtl"] .ml-2 {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+[dir="rtl"] .mr-2 {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+[dir="rtl"] .ml-4 {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+[dir="rtl"] .mr-4 {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+    
+    .feature-card, .testimonial-card {
+        transition-delay: 0s;
+    }
+}
+
+/* Custom gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Custom badge styles */
+.badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-primary {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.badge-secondary {
+    @apply bg-green-100 text-green-800;
+}
+
+/* Custom image styles */
+.img-rounded {
+    @apply rounded-lg overflow-hidden;
+}
+
+.img-circle {
+    @apply rounded-full overflow-hidden;
+}
+
+/* Custom shadow styles */
+.shadow-hover {
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
